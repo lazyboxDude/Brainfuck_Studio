@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.anchorpoint.sourcecontrol": {
+      "version": "https://github.com/Anchorpoint-Software/ap-unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.editorcoroutines": "1.0.0"
+      },
+      "hash": "90a1bff0bd5a08f6547077d9ca6644b0b0ed784c"
+    },
     "com.autodesk.fbx": {
       "version": "5.1.1",
       "depth": 2,
@@ -79,6 +89,13 @@
         "com.unity.modules.uielements": "1.0.0",
         "com.unity.modules.screencapture": "1.0.0"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.editorcoroutines": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
