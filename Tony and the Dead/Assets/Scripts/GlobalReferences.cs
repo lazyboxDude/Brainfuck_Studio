@@ -27,6 +27,7 @@ public class GlobalReferences : MonoBehaviour
 
     private void Update()
     {
+        // Set active weapon slot
         foreach (GameObject weaponSlot in weaponSlots)
         {
             if (weaponSlot == activeWeaponSlot)
