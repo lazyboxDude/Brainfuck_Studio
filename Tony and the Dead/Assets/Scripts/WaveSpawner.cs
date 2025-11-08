@@ -2,10 +2,40 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.AI;
+using System.Collections.Generic;
+using DG.Tweening; // Add this line for DOTween
+
+
 
 public class WaveSpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab; //Enemy Prefabs
+    [System.Serializable]
+    public class EnemyType
+    {
+        public string enemyName;
+        public GameObject enemyPrefab;
+        public int baseEnemyHealth;
+        public int healthIncreasePerWave = 1; // How much to increase health each wave
+        public bool isBossEnemy = false;
+        public int spawnCount;
+        public int startWave = 1;
+        public int spawnEveryXWaves = 1;
+        public int enemyMultiplierPerWave = 0;
+    }
+
+    public EnemyType[] availableZombies;  // All available zombie types
+    
+    [System.Serializable]
+    public class SpawnRegion
+    {
+        public string regionName;
+        public Transform[] spawnWaypoints;  // Mindestens 3 pro Region
+        public bool isUnlocked = false;
+    }
+
+    public SpawnRegion[] spawnRegions;
+    public float waypointRadius = 2f;
+
     private NavMeshAgent navMeshAgent;
 
     public static WaveSpawner Instance { get; private set; }
@@ -15,13 +45,10 @@ public class WaveSpawner : MonoBehaviour
     public int waveIndex = 0; //Current wave index
      
     public float spawnRadius = 20f;
-    public int ZombiesPerWave = 5; //Number of zombies per wave
+
     public int EnemySpawnRatePerWave = 2;
     public int enemiesAlive = 0; //Number of enemies alive
-    public int healthIncreasePerWave = 1; // How much to increase health each wave
-
-    public int baseEnemyHealth;
-
+    
     //UI 
     public TMP_Text waveText; // For TextMeshPro
     
@@ -29,35 +56,67 @@ public class WaveSpawner : MonoBehaviour
     {
         Instance = this;
         SpawnWave();
+        print("Wave Spawner Initialized");
     }
- 
+
     public void SpawnWave()
     {
-        int zombiesToSpawn = ZombiesPerWave + (waveIndex * EnemySpawnRatePerWave);
-        for (int i = 0; i < zombiesToSpawn; i++)
+        waveIndex++; // Increase wave index at the start of spawning a new wave
+        waveText.text = "Wave " + waveIndex;
+        for (int i = 0; i < EnemySpawnRatePerWave * waveIndex; i++)
         {
-            // spawn enemy at random point within spawnRadius
-            Vector3 randomDirection = Random.insideUnitSphere * spawnRadius;
-            randomDirection += transform.position;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomDirection, out hit, spawnRadius, NavMesh.AllAreas))
+            SpawnEnemy();
+            enemiesAlive++;
+        }
+    }
+
+    public void SpawnEnemy()
+    {
+        // Choose a random enemy type from available zombies
+        EnemyType enemyType = availableZombies[Random.Range(0, availableZombies.Length)];
+
+        // Get a random spawn position from waypoints
+        Vector3 spawnPosition = GetSpawnPosition();
+
+
+        // Instantiate the enemy prefab at the spawn position
+        GameObject enemy = Instantiate(enemyType.enemyPrefab, spawnPosition, Quaternion.identity);
+        enemy.transform.localScale = Vector3.zero;
+        enemy.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack);
+    //    Set enemy health based on wave index
+    //    BaseZombie enemyHealth = enemy.GetComponent<BaseZombie>();
+    //    if (enemyHealth != null)
+    //    {
+    //        int healthIncrease = enemyType.healthIncreasePerWave * (waveIndex - 1);
+    //        //enemyHealth.SetHealth(enemyType.baseEnemyHealth + healthIncrease);
+    //    }
+    }
+
+    public Vector3 GetSpawnPosition()
+    {
+        List<SpawnRegion> unlockedRegions = new List<SpawnRegion>();
+        foreach (var region in spawnRegions)
+        {
+            if (region.isUnlocked)
             {
-                GameObject enemy = Instantiate(enemyPrefab, hit.position, Quaternion.identity);
-                
-                // Set the health if the script exists
-                var zombie = enemy.GetComponent<BaseZombie>();
-                if (zombie != null)
-                {
-                    zombie.HealthFloat = baseEnemyHealth + (waveIndex * healthIncreasePerWave);
-                }
-                enemiesAlive++;
-                Debug.Log("Enemy Spawned. Total Enemies Alive: " + enemiesAlive);
+                unlockedRegions.Add(region);
             }
         }
+        if (unlockedRegions.Count > 0)
+        {
+            SpawnRegion randomRegion = unlockedRegions[Random.Range(0, unlockedRegions.Count)];
 
-        //increase the Wave Counter
-        waveIndex++;
-        waveText.text =  ("Wave: " + waveIndex   );
+            Transform randomWaypoint = randomRegion.spawnWaypoints[Random.Range(0, randomRegion.spawnWaypoints.Length)];
+
+            // Zufällige Position im Radius
+            Vector2 randomCircle = Random.insideUnitCircle * waypointRadius;
+            Vector3 offset = new Vector3(randomCircle.x, 0, randomCircle.y);
+
+            return randomWaypoint.position + offset;
+        }
+
+        return spawnRegions[0].spawnWaypoints[0].position; // Return a default Region if no regions are unlocked
+
     }
     public void EnemyDied()
     {
@@ -68,6 +127,8 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWaveAfterDelay());
         }
     }
+    
+
     private IEnumerator SpawnWaveAfterDelay()
     {
         yield return new WaitForSeconds(SecondsBetweenWaves);
