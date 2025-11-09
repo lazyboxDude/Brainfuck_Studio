@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1021265870583801716, guid: 1015d7d47867cf54fb28e92dad305d7e, type: 3}
       propertyPath: m_LightDimmer
-      value: 15.44
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1021265870583801716, guid: 1015d7d47867cf54fb28e92dad305d7e, type: 3}
       propertyPath: m_ShapeHeight
