@@ -20,8 +20,6 @@ public class Keypad : Interactable
     
     public void UnlockRegion()
     {
-        doorOpen = true;
-        door.GetComponent<Animator>().SetBool("IsOpen", doorOpen);
         
         // Schalte die Region mit diesem Namen frei
         if (WaveSpawner.Instance != null && !string.IsNullOrEmpty(regionName))
