@@ -31,6 +31,7 @@ public class BaseZombie : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.speed = 1.0f;
         behaviorAgent = GetComponent<BehaviorGraphAgent>();
+        SetHealth(health);
     
     }
 
@@ -55,17 +56,20 @@ public class BaseZombie : MonoBehaviour
         //reduce health
         health -= damage;
         //update behavior agent health if exists
-        
+
 
         if (health <= 0)
         {
             navMeshAgent.isStopped = true;
             Die();
-            
+
         }
     }
 
-    
+    public void SetHealth(int newHealth)
+    {
+        health = newHealth;
+    }
 
      public void Die()
     {

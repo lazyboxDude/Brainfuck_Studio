@@ -45,16 +45,8 @@ public class PlayerInventory : MonoBehaviour
     {
         if (inputManager == null)
             inputManager = GetComponent<InputManager>();
-        SwitchWeapon(new InputAction.CallbackContext());
     }
 
 
-    private void SwitchWeapon(InputAction.CallbackContext context)
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            // Hier deine Waffenwechsel-Logik
-            Debug.Log("Switching Weapon");
-        }
-    }
+
 }

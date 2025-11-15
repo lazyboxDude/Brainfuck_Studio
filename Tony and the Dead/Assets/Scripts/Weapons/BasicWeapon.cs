@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
@@ -10,14 +11,22 @@ public class BasicWeapon : MonoBehaviour
     //Input System
     private InputManager inputManager;
 
-    
-    //Shooting
+    #region Weapon Paramters
+
+            //Shooting
     public bool isShooting, readyToShoot;
     bool alllowReset = true;
     public int weaponDamage;
     public float shootingDelay = 2f;
+   // public float range;
+  
 
-    //Burst 
+            //Loading the weapon
+    public float reloadTime;
+    public int magazineSize, bulletLeft;
+    public bool isReloading;
+
+        //Burst 
     public int bulletsPerBurst = 3;
     public int burstBulletLeft;
 
@@ -30,24 +39,28 @@ public class BasicWeapon : MonoBehaviour
     public float bulletVelocity = 20f;
     public float bulletPrefabLifetime = 3f;
 
-    //Weapon Animation and Effects
-   public GameObject MuzzleEffect;
-    private Animator animator;
-
-    //Loading the weapon
-    public float reloadTime;
-    public int magazineSize, bulletLeft;
-    public bool isReloading;
-
-    //Spawn Position
-    public Vector3 spawnPosition;
-    public Vector3 spawnRotation;
-
-
-    //Shooting Mode
+        //Shooting Mode
     public bool isActiveWeapon;
     public enum ShootingMode { Auto, Burst, Single }
     public ShootingMode currentShootingMode;
+    // public bool Akimbo;
+        
+    #endregion
+
+    #region Weapon Animation Parameters
+
+        //Weapon Animation and Effects
+    public GameObject MuzzleEffect;
+    private Animator animator;
+
+
+        //Spawn Position
+    [SerializeField]
+    private GameObject RightHandPoint;
+    private Vector3 spawnPosition;
+    private Vector3 spawnRotation;
+        
+    #endregion
 
     private void Awake()
     {
@@ -66,6 +79,9 @@ public class BasicWeapon : MonoBehaviour
     {
         if (isActiveWeapon)
         {
+            Vector3 forward = Camera.main.transform.forward;
+            forward.y = 0; // Keep weapon level on the horizontal plane
+            transform.forward = forward.normalized;
             OnEnable();
         }
         
@@ -126,6 +142,8 @@ public class BasicWeapon : MonoBehaviour
         //Set the bullet damage
         BasicBullet bul = bullet.GetComponent<BasicBullet>();
         bul.bulletDamage = weaponDamage;
+
+        
         
         
         //Rotate the bullet to face the shooting direction

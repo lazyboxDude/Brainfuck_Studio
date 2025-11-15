@@ -4,6 +4,7 @@ public class PlayerMotor : MonoBehaviour
 {
     private CharacterController characterController;
     private Vector3 playerVelocity;
+    private Animator animator;
 
     private bool isGrounded;
     private bool lerpCrouch = false;
@@ -21,6 +22,7 @@ public class PlayerMotor : MonoBehaviour
     {
         //Assing Character Controller
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -59,11 +61,21 @@ public class PlayerMotor : MonoBehaviour
         //Calling the Move function
         characterController.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
 
+        //Apply Animation
+        animator.SetBool("IsWalking",true);
+
         playerVelocity.y += gravity * Time.deltaTime;
+
         //Reset y velocity when on the ground
         if (isGrounded && playerVelocity.y < 0)
             playerVelocity.y = -2f;
         characterController.Move(playerVelocity * Time.deltaTime);
+
+        //Stop Walking Animation when no input
+        if (input == Vector2.zero)
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     public void Jump()
