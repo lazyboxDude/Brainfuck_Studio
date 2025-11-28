@@ -5,6 +5,10 @@ public class PlayerUI : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI promptText;
+
+
+
+    private TextMeshProUGUI pointsText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -55,10 +55,8 @@ public class BasicWeapon : MonoBehaviour
 
 
         //Spawn Position
-    [SerializeField]
-    private GameObject RightHandPoint;
-    private Vector3 spawnPosition;
-    private Vector3 spawnRotation;
+    public Vector3 spawnPosition;
+    public Vector3 spawnRotation;
         
     #endregion
 

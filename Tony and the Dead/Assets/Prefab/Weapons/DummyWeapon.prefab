@@ -140,9 +140,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3508451494138660610}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9118049, y: 0.1304097, z: 0.08725404}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.0022191727, y: 0, z: -0.0021360356}
+  m_LocalScale: {x: 0.33153224, y: 0.047416966, z: 0.031725567}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7555875957755555125}
@@ -150,7 +150,7 @@ Transform:
   - {fileID: 1301466597179097257}
   - {fileID: 2450822145434620751}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &5557834265049583776
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   isActiveWeapon: 0
   currentShootingMode: 2
   MuzzleEffect: {fileID: 6306431211056063282}
-  spawnPosition: {x: 90, y: 0, z: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
   spawnRotation: {x: 0, y: 0, z: 0}
 --- !u!95 &8575540753540393482
 Animator:

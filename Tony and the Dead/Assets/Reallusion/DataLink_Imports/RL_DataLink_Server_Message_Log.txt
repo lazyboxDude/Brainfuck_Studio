@@ -1,0 +1,1025 @@
+HELLO 17.11.2025 03:16:47 VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    3,
+    1029
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 17.11.2025 03:16:48 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 17.11.2025 03:17:19 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 17.11.2025 03:17:19 VALID
+{
+  "type": "ACTORS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 17.11.2025 03:17:19 VALID
+{
+  "message": "Exporting Avatar: HD Neutral M"
+}
+
+NOTIFY 17.11.2025 03:17:43 VALID
+{
+  "message": "Avatar Import: HD Neutral M"
+}
+
+CHARACTER 17.11.2025 03:17:43 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M\\HD Neutral M.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "motion_prefix": ""
+}
+
+NOTIFY 17.11.2025 03:22:13 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 17.11.2025 03:22:13 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 17.11.2025 03:22:13 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 17.11.2025 03:22:20 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 17.11.2025 03:22:20 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 0,
+  "start_frame": 0,
+  "end_frame": 0,
+  "time": 0,
+  "frame": 0,
+  "motion_prefix": ""
+}
+
+STOP 17.11.2025 03:25:20 VALID
+
+
+HELLO 17.11.2025 11:23:50 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 17.11.2025 11:23:50 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 17.11.2025 11:27:21 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 17.11.2025 11:27:21 VALID
+{
+  "type": "SCENE",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "A30FZDWFFTS3S613EKMC"
+    },
+    {
+      "name": "Key",
+      "type": "LIGHT",
+      "link_id": "4NW6BNPUOHFSL54P5WD4"
+    },
+    {
+      "name": "Side",
+      "type": "LIGHT",
+      "link_id": "415P79Q4J49IW7VQBYBM"
+    },
+    {
+      "name": "Back",
+      "type": "LIGHT",
+      "link_id": "9QIF9QHMYFWTMUZHVZF1"
+    },
+    {
+      "name": "Floor Shadow",
+      "type": "LIGHT",
+      "link_id": "GKWTEC2KXYPWY3HFLPFG"
+    }
+  ]
+}
+
+NOTIFY 17.11.2025 11:27:22 VALID
+{
+  "message": "Sync View Camera"
+}
+
+CAMERA_SYNC 17.11.2025 11:27:22 VALID
+{
+  "link_id": "0CU5E5WB4JAJ6CSPRDZP",
+  "name": "Preview Camera",
+  "loc": [
+    226.84617614746094,
+    -779.75750732421875,
+    218.54312133789063
+  ],
+  "rot": [
+    0.64615756273269653,
+    0.08652496337890625,
+    0.10063876211643219,
+    0.75157546997070313
+  ],
+  "sca": [
+    1.0,
+    0.99999994039535522,
+    0.99999988079071045
+  ],
+  "fov": 39.597751617431641,
+  "fit": "HORIZONTAL",
+  "width": 36.0,
+  "height": 24.0,
+  "focal_length": 49.999996185302734,
+  "far_clip": 9999,
+  "near_clip": 1,
+  "pos": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "dof_enable": false,
+  "dof_weight": 25.0,
+  "dof_decay": 1.5,
+  "dof_focus": 1000.0,
+  "dof_range": 0.0,
+  "dof_far_blur": 1.0,
+  "dof_near_blur": 1.0,
+  "dof_far_transition": 800.0,
+  "dof_near_transition": 800.0,
+  "dof_min_blend_distance": 0.0,
+  "active": true,
+  "target": [
+    -0.74117910861968994,
+    -24.3555908203125,
+    12.922119140625
+  ]
+}
+
+FRAME_SYNC 17.11.2025 11:27:22 VALID
+{
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "current_time": 2100,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "current_frame": 21
+}
+
+NOTIFY 17.11.2025 11:27:22 VALID
+{
+  "message": "Exporting Lights / Cameras: ['Key', 'Side', 'Back', 'Floor Shadow']"
+}
+
+NOTIFY 17.11.2025 11:27:40 VALID
+{
+  "message": "Lights / Cameras Import: ['Key', 'Side', 'Back', 'Floor Shadow']"
+}
+
+STAGING 17.11.2025 11:27:40 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\Staging_1763375242129756500\\Key.rlx",
+  "remote_id": "",
+  "names": [
+    "Key",
+    "Side",
+    "Back",
+    "Floor Shadow"
+  ],
+  "types": [
+    "LIGHT",
+    "LIGHT",
+    "LIGHT",
+    "LIGHT"
+  ],
+  "link_ids": [
+    "4NW6BNPUOHFSL54P5WD4",
+    "415P79Q4J49IW7VQBYBM",
+    "9QIF9QHMYFWTMUZHVZF1",
+    "GKWTEC2KXYPWY3HFLPFG"
+  ],
+  "motion_prefix": ""
+}
+
+NOTIFY 17.11.2025 11:27:40 VALID
+{
+  "message": "Exporting Avatar: HD Neutral M"
+}
+
+NONE 17.11.2025 11:27:40 VALID
+{
+  "link_id": "9QIF9QHMYFWTMUZHVZF1",
+  "name": "Back",
+  "loc": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rot": [
+    0.022674109786748886,
+    0.54264217615127563,
+    0.80950593948364258,
+    0.22299221158027649
+  ],
+  "sca": [
+    1.0,
+    0.99999994039535522,
+    1.0
+  ],
+  "active": true,
+  "color": [
+    0.42352944612503052,
+    0.686274528503418,
+    0.86274516582489014
+  ],
+  "multiplier": 1.0,
+  "type": "DIR",
+  "range": 1000,
+  "angle": 0,
+  "falloff": 100,
+  "attenuation": 100,
+  "inverse_square": false,
+  "transmission": true,
+  "is_tube": false,
+  "tube_length": 0,
+  "tube_radius": 0,
+  "tube_soft_radius": 0,
+  "is_rectangle": false,
+  "rect": [
+    0.0,
+    0.0
+  ],
+  "cast_shadow": true,
+  "darkness": 0.0,
+  "frame_count": 1800
+}
+
+NONE 17.11.2025 11:27:42 VALID
+{
+  "link_id": "GKWTEC2KXYPWY3HFLPFG",
+  "name": "Floor Shadow",
+  "loc": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rot": [
+    0.3486693799495697,
+    -0.043901260942220688,
+    -0.27609694004058838,
+    0.89457970857620239
+  ],
+  "sca": [
+    1.0,
+    1.0,
+    0.99999994039535522
+  ],
+  "active": true,
+  "color": [
+    0.62745100259780884,
+    0.62745100259780884,
+    0.62745100259780884
+  ],
+  "multiplier": 0.0,
+  "type": "DIR",
+  "range": 1000,
+  "angle": 0,
+  "falloff": 100,
+  "attenuation": 100,
+  "inverse_square": false,
+  "transmission": false,
+  "is_tube": false,
+  "tube_length": 0,
+  "tube_radius": 0,
+  "tube_soft_radius": 0,
+  "is_rectangle": false,
+  "rect": [
+    0.0,
+    0.0
+  ],
+  "cast_shadow": true,
+  "darkness": 0.29999998211860657,
+  "frame_count": 1800
+}
+
+NONE 17.11.2025 11:27:48 VALID
+{
+  "link_id": "4NW6BNPUOHFSL54P5WD4",
+  "name": "Key",
+  "loc": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rot": [
+    0.41056692600250244,
+    0.235908642411232,
+    0.25465920567512512,
+    0.8431670069694519
+  ],
+  "sca": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "active": true,
+  "color": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "multiplier": 1.2000000476837158,
+  "type": "DIR",
+  "range": 1000,
+  "angle": 0,
+  "falloff": 100,
+  "attenuation": 100,
+  "inverse_square": false,
+  "transmission": true,
+  "is_tube": false,
+  "tube_length": 0,
+  "tube_radius": 0,
+  "tube_soft_radius": 0,
+  "is_rectangle": false,
+  "rect": [
+    0.0,
+    0.0
+  ],
+  "cast_shadow": true,
+  "darkness": 0.0,
+  "frame_count": 1800
+}
+
+NONE 17.11.2025 11:27:52 VALID
+{
+  "link_id": "415P79Q4J49IW7VQBYBM",
+  "name": "Side",
+  "loc": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rot": [
+    -8.2013502833433449E-06,
+    -0.59107130765914917,
+    -0.14957684278488159,
+    0.7926294207572937
+  ],
+  "sca": [
+    0.99999988079071045,
+    1.0,
+    1.0000001192092896
+  ],
+  "active": true,
+  "color": [
+    0.64705884456634521,
+    0.95294123888015747,
+    0.88235300779342651
+  ],
+  "multiplier": 0.800000011920929,
+  "type": "DIR",
+  "range": 1000,
+  "angle": 0,
+  "falloff": 100,
+  "attenuation": 100,
+  "inverse_square": false,
+  "transmission": true,
+  "is_tube": false,
+  "tube_length": 0,
+  "tube_radius": 0,
+  "tube_soft_radius": 0,
+  "is_rectangle": false,
+  "rect": [
+    0.0,
+    0.0
+  ],
+  "cast_shadow": true,
+  "darkness": 0.0,
+  "frame_count": 1800
+}
+
+NOTIFY 17.11.2025 11:28:18 VALID
+{
+  "message": "Avatar Import: HD Neutral M"
+}
+
+CHARACTER 17.11.2025 11:28:18 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M\\HD Neutral M.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "A30FZDWFFTS3S613EKMC",
+  "motion_prefix": ""
+}
+
+NOTIFY 17.11.2025 11:28:18 VALID
+{
+  "message": "Sync View Camera"
+}
+
+CAMERA_SYNC 17.11.2025 11:28:18 VALID
+{
+  "link_id": "0CU5E5WB4JAJ6CSPRDZP",
+  "name": "Preview Camera",
+  "loc": [
+    226.84617614746094,
+    -779.75750732421875,
+    218.54312133789063
+  ],
+  "rot": [
+    0.64615756273269653,
+    0.08652496337890625,
+    0.10063876211643219,
+    0.75157546997070313
+  ],
+  "sca": [
+    1.0,
+    0.99999994039535522,
+    0.99999988079071045
+  ],
+  "fov": 39.597751617431641,
+  "fit": "HORIZONTAL",
+  "width": 36.0,
+  "height": 24.0,
+  "focal_length": 49.999996185302734,
+  "far_clip": 9999,
+  "near_clip": 1,
+  "pos": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "dof_enable": false,
+  "dof_weight": 25.0,
+  "dof_decay": 1.5,
+  "dof_focus": 1000.0,
+  "dof_range": 0.0,
+  "dof_far_blur": 1.0,
+  "dof_near_blur": 1.0,
+  "dof_far_transition": 800.0,
+  "dof_near_transition": 800.0,
+  "dof_min_blend_distance": 0.0,
+  "active": true,
+  "target": [
+    0.25993329286575317,
+    0.29695147275924683,
+    15.53797721862793
+  ]
+}
+
+FRAME_SYNC 17.11.2025 11:28:18 VALID
+{
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "current_time": 0,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "current_frame": 0
+}
+
+STOP 17.11.2025 11:56:31 VALID
+
+
+HELLO 17.11.2025 11:57:54 VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    3,
+    1029
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 17.11.2025 11:57:54 VALID
+{
+  "message": "Connected"
+}
+
+STOP 17.11.2025 12:03:05 VALID
+
+
+HELLO 17.11.2025 12:03:29 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 17.11.2025 12:03:30 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 17.11.2025 12:06:37 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 17.11.2025 12:06:37 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 17.11.2025 12:06:38 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 17.11.2025 12:06:59 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 17.11.2025 12:06:59 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "time": 0,
+  "frame": 0,
+  "motion_prefix": ""
+}
+
+NOTIFY 17.11.2025 12:08:30 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 17.11.2025 12:08:30 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 17.11.2025 12:08:31 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 17.11.2025 12:08:50 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 17.11.2025 12:08:50 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "time": 400,
+  "frame": 4,
+  "motion_prefix": ""
+}
+
+HELLO 18.11.2025 01:00:10 VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    3,
+    1029
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 18.11.2025 01:00:10 VALID
+{
+  "message": "Connected"
+}
+
+HELLO 18.11.2025 01:01:18 VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    3,
+    1029
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 18.11.2025 01:01:18 VALID
+{
+  "message": "Connected"
+}
+
+STOP 18.11.2025 01:01:24 VALID
+
+
+HELLO 18.11.2025 01:01:47 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:01:47 VALID
+{
+  "message": "Connected"
+}
+
+HELLO 18.11.2025 01:25:29 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:25:29 VALID
+{
+  "message": "Connected"
+}
+
+HELLO 18.11.2025 01:37:50 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:37:50 VALID
+{
+  "message": "Connected"
+}
+
+HELLO 18.11.2025 01:39:54 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:39:54 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 18.11.2025 01:39:56 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 18.11.2025 01:39:56 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 18.11.2025 01:39:56 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 18.11.2025 01:40:22 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 18.11.2025 01:40:22 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "time": 39600,
+  "frame": 396,
+  "motion_prefix": ""
+}
+
+HELLO 18.11.2025 01:41:21 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:41:21 VALID
+{
+  "message": "Connected"
+}
+
+HELLO 18.11.2025 01:49:15 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:49:15 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 18.11.2025 01:49:19 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 18.11.2025 01:49:19 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 18.11.2025 01:49:19 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 18.11.2025 01:49:37 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 18.11.2025 01:49:37 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "time": 13000,
+  "frame": 130,
+  "motion_prefix": ""
+}
+
+HELLO 18.11.2025 01:51:34 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:51:34 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 18.11.2025 01:51:54 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 18.11.2025 01:51:54 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 18.11.2025 01:51:54 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 18.11.2025 01:52:14 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 18.11.2025 01:52:14 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 179900,
+  "start_frame": 0,
+  "end_frame": 1799,
+  "time": 0,
+  "frame": 0,
+  "motion_prefix": ""
+}
+
+HELLO 18.11.2025 01:58:24 VALID
+{
+  "Application": "iClone",
+  "Version": [
+    8,
+    63,
+    4631
+  ],
+  "Path": "C:\\Users\\mgome\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.1.0",
+  "Exe": "C:\\Program Files\\Reallusion\\iClone 8\\Bin64\\iClone.exe"
+}
+
+NOTIFY 18.11.2025 01:58:24 VALID
+{
+  "message": "Connected"
+}
+
+NOTIFY 18.11.2025 01:58:34 VALID
+{
+  "message": "Request"
+}
+
+REQUEST 18.11.2025 01:58:34 VALID
+{
+  "type": "MOTIONS",
+  "actors": [
+    {
+      "name": "HD Neutral M",
+      "type": "AVATAR",
+      "link_id": "0LHMVLXUZ2VKH0KC2XJ7"
+    }
+  ]
+}
+
+NOTIFY 18.11.2025 01:58:34 VALID
+{
+  "message": "Exporting Motion: HD Neutral M_motion"
+}
+
+NOTIFY 18.11.2025 01:58:40 VALID
+{
+  "message": "Motion Import: HD Neutral M_motion"
+}
+
+MOTION 18.11.2025 01:58:40 VALID
+{
+  "path": "D:\\Brainfuck_Production\\Tony and the Dead\\RL_DataLink\\imports\\HD Neutral M_motion\\HD Neutral M_motion.fbx",
+  "remote_id": "",
+  "name": "HD Neutral M",
+  "type": "AVATAR",
+  "link_id": "0LHMVLXUZ2VKH0KC2XJ7",
+  "fps": 60.0,
+  "start_time": 0,
+  "end_time": 3800,
+  "start_frame": 0,
+  "end_frame": 38,
+  "time": 3700,
+  "frame": 37,
+  "motion_prefix": ""
+}
+

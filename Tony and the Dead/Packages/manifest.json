@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.anchorpoint.sourcecontrol": "https://github.com/Anchorpoint-Software/ap-unity.git",
+    "com.soupday.cc3_unity_tools": "file:C:/Users/mgome/Downloads/CCIC_Auto_Setup_for_Unity/CCIC Auto Setup for Unity/Install in Unity/CCiC-Unity-Tools",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.behavior": "1.0.12",

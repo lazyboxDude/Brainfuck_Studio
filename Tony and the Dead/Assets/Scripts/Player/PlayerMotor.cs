@@ -5,6 +5,8 @@ public class PlayerMotor : MonoBehaviour
     private CharacterController characterController;
     private Vector3 playerVelocity;
     private Animator animator;
+    int isWalkingHash = Animator.StringToHash("IsWalking");
+    int isRunningHash = Animator.StringToHash("IsRunning");
 
     private bool isGrounded;
     private bool lerpCrouch = false;
@@ -13,6 +15,7 @@ public class PlayerMotor : MonoBehaviour
 
 
     public float speed = 5f;
+    public float RunSpeedMultiplier = 2f;
     public float gravity = -9.8f;
     public float crouchTimer = 1;
 
@@ -23,6 +26,8 @@ public class PlayerMotor : MonoBehaviour
         //Assing Character Controller
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        isWalkingHash = Animator.StringToHash("IsWalking");
+        isRunningHash = Animator.StringToHash("IsRunning");
 
     }
 
@@ -60,10 +65,6 @@ public class PlayerMotor : MonoBehaviour
 
         //Calling the Move function
         characterController.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
-
-        //Apply Animation
-        animator.SetBool("IsWalking",true);
-
         playerVelocity.y += gravity * Time.deltaTime;
 
         //Reset y velocity when on the ground
@@ -71,10 +72,18 @@ public class PlayerMotor : MonoBehaviour
             playerVelocity.y = -2f;
         characterController.Move(playerVelocity * Time.deltaTime);
 
-        //Stop Walking Animation when no input
-        if (input == Vector2.zero)
+        //Apply Animation
+        bool isWalking = animator.GetBool(isWalkingHash);
+        if (moveDirection != Vector3.zero)
         {
-            animator.SetBool("IsWalking", false);
+            animator.SetBool(isWalkingHash,true);
+        }
+
+        //Stop Walking Animation when no input
+        if (moveDirection == Vector3.zero)
+        {
+            animator.SetBool(isWalkingHash, false);
+            animator.SetBool(isRunningHash, false);
         }
     }
 
@@ -98,8 +107,14 @@ public class PlayerMotor : MonoBehaviour
     {
         sprinting = !sprinting;
         if (sprinting)
-            speed = 8;
+        {
+            animator.SetBool(isRunningHash, true);
+            speed = 1;
+        }
+            
         else
+            animator.SetBool(isRunningHash, false);
             speed = 5;
+
     }
 }
